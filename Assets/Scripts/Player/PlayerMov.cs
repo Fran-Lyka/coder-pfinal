@@ -11,10 +11,11 @@ public class PlayerMov : MonoBehaviour
     public Vector3 v3;
     public bool inground;
     public float TransLayers;
+    [SerializeField] 
     public float speed;
-    public float jumpSpeed;
+    [SerializeField] public WeaponsManager weaponManager;
     public float distance;
-
+//hola
     void Move()
     {
         Vector3 RotaTargetZ = eje.transform.forward;
@@ -97,6 +98,14 @@ public class PlayerMov : MonoBehaviour
             speed = speed / 3;
         }
 
+       void OnTriggerEnter(Collider other)
+       {
+        if (other.gameObject.CompareTag("Weapons"))
+        {
+            other.gameObject.SetActive(false);
+            weaponManager.weaponList.Add(other.gameObject);
+        }
+       }
     }
     
     

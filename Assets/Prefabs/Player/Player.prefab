@@ -3078,7 +3078,7 @@ MonoBehaviour:
   inground: 0
   TransLayers: 0
   speed: 250
-  jumpSpeed: 10
+  weaponManager: {fileID: 0}
   distance: 1
 --- !u!1 &6230927318062440421
 GameObject:

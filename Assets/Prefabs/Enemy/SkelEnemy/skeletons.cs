@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class skeletons : MonoBehaviour
 {
-    // Start is called before the first frame update
     public int rutina;
     public float cronometro;
     public Animator ani;
